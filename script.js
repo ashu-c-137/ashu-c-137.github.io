@@ -3,25 +3,25 @@ const questions = [
         question: "What's Taylor Swift's birth year?",
         choices: ["1987", "1989", "1990", "1992"],
         correct: 1,
-        codeFragment: "TS"
+        codeFragment: "A"
     },
     {
         question: "Which of these is NOT a Taylor Swift album?",
         choices: ["Fearless", "Speak Now", "Melodrama", "Folklore"],
         correct: 2,
-        codeFragment: "89"
+        codeFragment: "LI"
     },
     {
         question: "What's the name of Taylor's cat that's named after a TV detective?",
         choices: ["Meredith", "Olivia", "Benjamin", "Sherlock"],
         correct: 1,
-        codeFragment: "AL"
+        codeFragment: "YA"
     },
     {
         question: "Which song has the lyric 'I'm only 17, I don't know anything'?",
         choices: ["Fifteen", "All Too Well", "Betty", "Cardigan"],
         correct: 2,
-        codeFragment: "IY"
+        codeFragment: "13"
     }
 ];
 
