@@ -83,8 +83,8 @@ Remember, in the words of the queen herself, "You're on some new level!" So go o
 
 Stay fearless, stay enchanted, and may all your wildest dreams come true! 
 
-Your bestie and fellow Swiftie,
-Your Secret Admirer 😘💖
+Love,
+Ashutosh 💖
 
 P.S. Don't forget to stream Taylor's entire discography today. It's what birthday queens do! 🎵👑`;
         document.getElementById('birthday-message').textContent = message;
