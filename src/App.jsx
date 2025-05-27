@@ -2,23 +2,30 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import { motion, AnimatePresence } from "framer-motion";
+import useThemeStore from "./store/themeStore";
+import ThemeToggle from "./components/ThemeToggle";
 import "./index.css";
 import BlogPost from "./components/BlogPost";
 import BlogList from "./components/BlogList";
 import Home from "./components/Home";
 
 const App = () => {
+  const { isDev } = useThemeStore();
+
   return (
     <Router>
-      <div className="container">
+      <div className={`container ${isDev ? 'dev-mode' : ''}`}>
         <nav className="navbar">
-          <motion.h1 
-            className="logo"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            4shu.dev
-          </motion.h1>
+          <div className="nav-left">
+            <motion.h1 
+              className="logo"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              4shu.dev
+            </motion.h1>
+            <ThemeToggle />
+          </div>
           <ul className="nav-links">
             <li>
               <ScrollLink 
@@ -27,6 +34,7 @@ const App = () => {
                 smooth={true} 
                 duration={500} 
                 offset={-100}
+                className="nav-link"
               >
                 Home
               </ScrollLink>
@@ -38,6 +46,7 @@ const App = () => {
                 smooth={true} 
                 duration={500} 
                 offset={-100}
+                className="nav-link"
               >
                 About
               </ScrollLink>
@@ -49,6 +58,7 @@ const App = () => {
                 smooth={true} 
                 duration={500} 
                 offset={-100}
+                className="nav-link"
               >
                 Work
               </ScrollLink>
@@ -60,6 +70,7 @@ const App = () => {
                 smooth={true} 
                 duration={500} 
                 offset={-100}
+                className="nav-link"
               >
                 Resume
               </ScrollLink>
@@ -74,6 +85,7 @@ const App = () => {
                 smooth={true} 
                 duration={500} 
                 offset={-100}
+                className="nav-link"
               >
                 Contact
               </ScrollLink>
