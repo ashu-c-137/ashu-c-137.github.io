@@ -4,7 +4,6 @@ import "./index.css";
 const App = () => {
   return (
     <div className="container">
-      {/* Navigation Bar */}
       <nav className="navbar">
         <h1 className="logo">4shu.dev</h1>
         <ul className="nav-links">
@@ -16,9 +15,7 @@ const App = () => {
         </ul>
       </nav>
 
-      {/* Main Content */}
       <main className="main-content">
-        {/* About Section */}
         <section className="section" id="about">
           <h2 className="section-title">About Me</h2>
           <p className="bio">
@@ -40,7 +37,6 @@ const App = () => {
           </div>
         </section>
 
-        {/* Portfolio Section */}
         <section className="section" id="portfolio">
           <h2 className="section-title">Featured Work</h2>
           <div className="projects-grid">
@@ -62,7 +58,39 @@ const App = () => {
           </div>
         </section>
 
-        {/* Resume Section */}
+        <section className="section" id="blog">
+          <h2 className="section-title">Technical Blog</h2>
+          <div className="blog-grid">
+            <div className="blog-card">
+              <div className="blog-content">
+                <h3 className="blog-title">Setting Up React Native in 2025</h3>
+                <p className="blog-excerpt">
+                  A comprehensive guide to setting up a new React Native project using the latest CLI, best practices for project structure, and essential configurations for both iOS and Android platforms.
+                </p>
+                <p className="blog-meta">Published on March 15, 2025</p>
+              </div>
+            </div>
+            <div className="blog-card">
+              <div className="blog-content">
+                <h3 className="blog-title">Optimizing FlatList Performance</h3>
+                <p className="blog-excerpt">
+                  Deep dive into FlatList optimization techniques including windowSize, maxToRenderPerBatch, updateCellsBatchingPeriod, and implementing efficient item rendering with Pure Components.
+                </p>
+                <p className="blog-meta">Published on March 10, 2025</p>
+              </div>
+            </div>
+            <div className="blog-card">
+              <div className="blog-content">
+                <h3 className="blog-title">Pure Components in React Native</h3>
+                <p className="blog-excerpt">
+                  Understanding Pure Components, when to use them, their impact on performance, and common pitfalls to avoid. Includes real-world examples and performance benchmarks.
+                </p>
+                <p className="blog-meta">Published on March 5, 2025</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="section" id="resume">
           <h2 className="section-title">Experience</h2>
           <div className="resume-content">
@@ -91,7 +119,6 @@ const App = () => {
           </div>
         </section>
 
-        {/* Contact Section */}
         <section className="section" id="contact">
           <h2 className="section-title">Let's Connect</h2>
           <p className="bio">I'm always interested in hearing about new projects and opportunities.</p>
@@ -100,7 +127,6 @@ const App = () => {
         </section>
       </main>
 
-      {/* Footer */}
       <footer className="footer">
         <div className="social-links">
           <a href="https://github.com/ashu-c-137" className="social-link" target="_blank" rel="noopener noreferrer">GitHub</a>

@@ -1,11 +1,11 @@
 :root {
-  --primary: #e4e4e4;
+  --primary: #e6f1ff;
   --secondary: #8892b0;
-  --background: #0a192f;
-  --accent: #64ffda;
-  --card-bg: #112240;
-  --card-hover: #233554;
-  --shadow: rgba(2, 12, 27, 0.7);
+  --background: #0f172a;
+  --accent: #00ff9d;
+  --card-bg: #1e293b;
+  --card-hover: #334155;
+  --shadow: rgba(0, 0, 0, 0.3);
   --font-mono: "Fira Code", monospace;
   --font-sans: "Inter", sans-serif;
 }
@@ -39,7 +39,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(10, 25, 47, 0.85);
+  background: rgba(15, 23, 42, 0.85);
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 15px var(--shadow);
   z-index: 1000;
@@ -88,11 +88,11 @@ body {
 
 /* Section Styles */
 .section {
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 6rem 0;
+  padding: 4rem 0;
 }
 
 .section-title {
@@ -168,7 +168,7 @@ body {
 .project-card {
   background: var(--card-bg);
   padding: 2rem;
-  border-radius: 4px;
+  border-radius: 8px;
   transition: all 0.3s ease;
   border: 1px solid transparent;
 }
@@ -206,7 +206,7 @@ body {
 .resume-content {
   background: var(--card-bg);
   padding: 2.5rem;
-  border-radius: 4px;
+  border-radius: 8px;
   max-width: 800px;
   border: 1px solid var(--card-hover);
 }
@@ -245,6 +245,50 @@ body {
   color: var(--accent);
 }
 
+/* Blog Section */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.blog-card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+}
+
+.blog-content {
+  padding: 1.5rem;
+}
+
+.blog-title {
+  color: var(--primary);
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.blog-excerpt {
+  color: var(--secondary);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.blog-meta {
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
 /* Contact Section */
 .contact-link {
   color: var(--accent);
@@ -262,7 +306,7 @@ body {
   padding: 2.5rem 0;
   text-align: center;
   background: var(--card-bg);
-  margin-top: 0;
+  margin-top: 2rem;
 }
 
 .social-links {
