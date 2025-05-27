@@ -6,14 +6,23 @@ const ThemeToggle = () => {
   const { isDev, toggleDevMode } = useThemeStore();
 
   return (
-    <motion.button
-      className={`theme-toggle ${isDev ? 'dev-mode' : ''}`}
-      onClick={toggleDevMode}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.95 }}
-    >
-      {isDev ? '> exit dev_mode' : '> enter dev_mode'}
-    </motion.button>
+    <div className="theme-toggle-container">
+      <motion.button
+        className={`theme-toggle ${isDev ? 'dev-mode' : ''}`}
+        onClick={toggleDevMode}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        initial={{ y: 100 }}
+        animate={{ y: 0 }}
+        transition={{
+          type: "spring",
+          stiffness: 260,
+          damping: 20
+        }}
+      >
+        {isDev ? '⚡ Exit Dev Mode' : '⚡ Enter Dev Mode'}
+      </motion.button>
+    </div>
   );
 };
 
