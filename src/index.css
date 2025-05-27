@@ -1,4 +1,5 @@
 :root {
+  /* Default Theme */
   --primary: #ffffff;
   --secondary: #888888;
   --background: #000000;
@@ -10,10 +11,27 @@
   --font-sans: "Space Mono", monospace;
 }
 
+.dev-mode {
+  --primary: #ff3864;
+  --secondary: #29263c;
+  --background: #0d0221;
+  --accent: #ff3864;
+  --card-bg: #1a1836;
+  --card-hover: #251f47;
+  --shadow: rgba(255, 56, 100, 0.2);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.dev-mode * {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16'><rect width='16' height='16' fill='%23ff3864'/></svg>") 8 8, auto;
+}
+
+* {
   cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16'><rect width='16' height='16' fill='%2300ff00'/></svg>") 8 8, auto;
 }
 
@@ -27,6 +45,7 @@ body {
   color: var(--primary);
   font-family: var(--font-mono);
   line-height: 1.75;
+  transition: all 0.3s ease;
 }
 
 .container {
@@ -51,6 +70,28 @@ body {
   z-index: 1000;
 }
 
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.theme-toggle {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 0.5rem 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background: var(--accent);
+  color: var(--background);
+}
+
 .logo {
   font-family: var(--font-mono);
   color: var(--accent);
@@ -65,7 +106,7 @@ body {
   gap: 2rem;
 }
 
-.nav-links a {
+.nav-link {
   text-decoration: none;
   color: var(--primary);
   font-family: var(--font-mono);
@@ -74,9 +115,10 @@ body {
   position: relative;
   padding: 0.5rem 1rem;
   border: 1px solid transparent;
+  cursor: pointer;
 }
 
-.nav-links a:hover {
+.nav-link:hover {
   border-color: var(--accent);
   color: var(--accent);
   text-shadow: 0 0 5px var(--accent);
@@ -88,8 +130,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 6rem 0;
+  padding: 8rem 0;
   position: relative;
+  scroll-margin-top: 5rem;
 }
 
 .section:not(:last-child)::after {
